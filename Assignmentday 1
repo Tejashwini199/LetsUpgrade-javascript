@@ -1,0 +1,202 @@
+####Question no1####
+Explore and Explain the various methods in console function.Explain them.Ex. console.log()
+console.warn().
+etc... -->
+
+1)console.assert()=The console.assert() method writes a message to the console, but only if an expression evaluates to false.
+
+2)console.clear()=The console.clear() method clears the console.
+
+3)console.count()=Writes to the console the number of times that particular console.count() is called.You can add a label that will be included in the console view. 
+By default the label "default" will be added.
+
+4)console.error()=The console.error() method writes an error message to the console.The console is useful for testing purposes.
+
+5)console.group()=The console.group() method indicates the start of a message group.All messages will from now on be written inside this group.
+
+6)console.groupCollapsed()=The console.groupCollapsed() method indicates the start of a collapsed message group.Click the expand button to open the message group.
+All messages will from now on be written inside this group.
+
+7)console.groupEnd()=The console.groupEnd() method indicates the end of a message group.
+
+8)console.info()=The console.info() method writes a message to the console.
+
+9)console.log()=The console.log() method writes a message to the console.The console is useful for testing purposes.
+
+10)console.table()=The console.table() method writes a table in the console view.
+The first parameter is required, and must be either an object, or an array, containing data to fill the table.
+
+11)console.time()=The console.time() method starts a timer in the console view.This method allows you to time certain operations in your code for testing purposes.
+Use the console.timeEnd() method to end the timer and display the result in the console.view.
+
+12)console.timeEnd()=The console.timeEnd() method ends a timer, and writes the result in the console view.This method allows you to time certain operations in your code for testing purposes.
+Use the console.time() method to start the timer.
+
+13)console.trace()=The console.trace() method displays a trace that show how the code ended up at a certain point.
+
+14)console.warn()=The console.warn() method writes a warning to the console.
+
+###code Format###
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Qestion 1, Day 1, Date: 14 July 2020</title>
+</head>
+
+<body style="background-color: gainsboro;">
+
+    <h2>Answer:1 Press F12 and navigate to console and then messages.</h2>
+
+    <script>
+        
+        var a = { name: "Me", age: "22", city: "New Delhi" }
+        var b = { name: "You", age: "24", city: "Mumbai" }
+        var c = { name: "GitHub", age: "15", city: "San Francisco" }
+
+        console.time('Time taken');
+
+        console.log("The console. log() is a function that writes a message to log on the debugging console, such as Webkit or Firebug. In a browser you will not see anything on the screen. It logs a message to a debugging console.");
+
+        console.error("The Error Console is a tool available in most Mozilla-based applications that is used for reporting errors in the application chrome and in web pages user opens. It reports JavaScript-related errors and warnings, CSS errors and arbitrary messages from chrome code");
+
+        console.warn("The console. warn() method is used to write a warning message in the console. So open the console to display the output (warning message).");
+
+        console.log('The console.table() allows to display data in the console in a nice tabular format.');
+        console.table({ a, b, c });
+
+        console.log('%c Custom css script message', 'color:green;');
+
+        console.log('Styntax: console.timeEnd(label), label: The name of the timer to stop. Once stopped, the elapsed time is automatically displayed in the Web Console along with an indicator that the time has ended. definition: Stops a timer that was previously started by calling console.time().');
+        console.timeEnd('Time taken');
+
+    </script>
+
+</body>
+
+</html>
+
+
+####Question 2####=
+write the difference between var,let and const with code example.
+
+##var: The scope of a variable defined with the keyword “var” is limited to the “function” within which it is defined. If it is defined outside any function, the scope of the variable is global.
+var is “function scoped”.
+
+Example: var a =10;
+Variable declarations are processed before the execution of the code.
+The scope of a JavaScript variable declared with var is its current execution context.
+The scope of a JavaScript variable declared outside the function is global.
+
+#code
+function nodeSimplified(){
+  var a =10;
+  console.log(a);  // output 10
+  if(true){
+   var a=20;
+   console.log(a); // output 20
+  }
+  console.log(a);  // output 20
+}
+
+##let: The scope of a variable defined with the keyword “let” or “const” is limited to the “block” defined by curly braces i.e. {} .
+“let” and “const” are“block scoped”.
+
+Example: let a =10;
+The let statement allows you to create a variable with the scope limited to the block on which it is used.
+It is similar to the variable we declare in other languages like Java, .NET, etc.
+
+#Code
+function nodeSimplified(){
+  let a =10;
+  console.log(a);  // output 10
+  if(true){
+   let a=20;
+   console.log(a); // output 20
+  }
+  console.log(a);  // output 10
+}
+
+##const: The scope of a variable defined with the keyword “const” is limited to the block defined by curly braces. However if a variable is defined with keyword const, 
+it cannot be reassigned.“const” cannot be re-assigned to a new value. However it CAN be mutated.
+
+Example: const a =10;
+#Code
+function nodeSimplified(){
+  const MY_VARIABLE =10;
+  console.log(MY_VARIABLE);  //output 10 
+}
+
+#####Question no 3####
+Write a brief intro on the avaiable datatypes in javascript.
+
+ANS==
+JavaScript Data Types
+JavaScript variables can hold many data types: numbers, strings, objects and more:
+
+var length = 16;                               // Number
+var lastName = "Johnson";                      // String
+var x = {firstName:"John", lastName:"Doe"};    // Object
+
+#The Concept of Data Types
+In programming, data types is an important concept.To be able to operate on variables, it is important to know something about the type.
+
+Without data types, a computer cannot safely solve this:
+
+var x = 16 + "car";
+JavaScript will treat the example above as:
+
+var x = "16" + "car";
+
+#JavaScript Strings--------
+A string (or a text string) is a series of characters like "John Doe".
+Strings are written with quotes. You can use single or double quotes
+#Example:-
+var carName1 = "Volvo XC60";   // Using double quotes
+var carName2 = 'Volvo XC60';   // Using single quotes
+
+#JavaScript Numbers------
+JavaScript has only one type of numbers.
+Numbers can be written with, or without decimals:
+
+#Example:-
+var x1 = 34.00;     // Written with decimals
+var x2 = 34;        // Written without decimals
+
+#JavaScript Booleans-------
+Booleans can only have two values: true or false.Booleans are often used in conditional testing.
+
+#Example:-
+var x = 5;
+var y = 5;
+var z = 6;
+(x == y)       // Returns true
+(x == z)       // Returns false
+
+
+#Undefined------
+In JavaScript, a variable without a value, has the value undefined. The type is also undefined.Any variable can be emptied, by setting the value to undefined.
+The type will also be undefined.A variable that has not been assigned a value is undefined.
+
+#Example:-
+var car;    // Value is undefined, type is undefined
+
+
+#Null--------
+In JavaScript null is "nothing". It is supposed to be something that doesn't exist>Unfortunately, in JavaScript, the data type of null is an object.
+You can consider it a bug in JavaScript that typeof null is an object. It should be null.You can empty an object by setting it to null:
+
+#Example:-
+var person = {firstName:"John", lastName:"Doe", age:50, eyeColor:"blue"};
+person = null;    // Now value is null, but type is still an object
+
+
+#JavaScript Objects-------
+JavaScript objects are written with curly braces {}.Object properties are written as name:value pairs, separated by commas.
+It is the most important data-type and forms the building blocks for modern JavaScript. We will learn about these data types in details in further articles.
+
+#Example:-
+var person = {firstName:"John", lastName:"Doe", age:50, eyeColor:"blue"};
+
+
+
