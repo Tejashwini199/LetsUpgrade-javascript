@@ -1,0 +1,60 @@
+//Question no. 1
+//Take a number from a user and write a function which checks wheather the number is even or odd.Assign the result to a variable and log that variable in console.
+
+<!doctype html>
+<html>
+<head>
+<script>
+function odd_even(){
+var no;
+no=Number(document.getElementById("no_input").value);
+if(no%2==0)
+{
+alert("Even Number");
+}
+else
+{
+alert("Odd Number");
+}
+}
+</script>
+</head>
+<body>
+Enter Any Number:<input id="no_input"><br />
+<button onclick="odd_even()">Click</button>
+</body>
+</html>
+
+
+    
+
+//Question no 2:
+//Write a program  which will take OS name and version from the user separated by a space.Then log OS name and version on the console.
+
+let a=prompt("Enter your os :");
+let b=a.split(" ")
+console.log(`The OS name is ${b[0]} and version is ${b[1]}`);
+
+
+
+//Question no. 3:
+//Write a program to take marks as input from the user and grade him accordingly. use conditional statements. Also the same code using switch or ternary.
+
+
+let grade = 87;
+
+// Check if grade is an A, B, C, D, or F
+if (grade >= 90) {
+  console.log("A+");
+} else if (grade >= 80) {
+  console.log("A");
+} else if (grade >= 70) {
+  console.log("B");
+} else if (grade >= 60) {
+  console.log("C");
+} else if(grade >= 50) {
+  console.log("D");
+} else {
+  console.log("F");
+}
+
