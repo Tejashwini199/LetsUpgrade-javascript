@@ -52,3 +52,10 @@ const resetBtn = document.getElementById('resetBtn');
 startBtn.addEventListener('click',start,false);
 stopBtn.addEventListener('click',stop,false);
 resetBtn.addEventListener('click',reset,false);
+
+<p class="stopwatch" id="stopwatch">
+        <!-- stopwatch goes here -->
+    </p>
+    <button class="btn-start" id="startBtn">Start</button>
+    <button class="btn-stop" id="stopBtn">Stop</button>
+    <button class="btn-reset" id="resetBtn">Reset</button>
